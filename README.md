@@ -1,2 +1,2 @@
 # Data Visualization Projects
- This repo contains some of my data visualization projects
+Some data visualization projects for academic, self learning, and hobby purposes.
