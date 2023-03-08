@@ -6,8 +6,12 @@ import plotly.express as px
 import datetime
 import os
 
+print("Geting Token")
+
 ACCESS_MAP_TOKEN = os.environ['ACCESS_MAP_TOKEN']
 # ACCESS_MAP_TOKEN = os.environ.get('ACCESS_MAP_TOKEN', "")
+
+print("ACCESS_MAP_TOKEN", ACCESS_MAP_TOKEN)
 
 CITYBIK_URL = "http://api.citybik.es/v2/networks"
 
