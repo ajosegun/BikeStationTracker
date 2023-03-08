@@ -77,7 +77,7 @@ def get_available_stations(city = "Paris"):
             'empty_slots' : info['empty_slots'],
             'free_bikes' : info['free_bikes'],
             'ebikes' : info['extra']['ebikes'] if "ebikes" in info['extra'] else 0,
-            'payment': ', '.join(info['extra']['payment']) if banking_info else "No" ,
+            'payment': ', '.join(info['extra']['payment'] if 'payment' in info['extra'] else "No") if banking_info else "No" ,
             'latitude' : info['latitude'],
             'longitude' : info['longitude'],
             'timestamp' : info['timestamp'],
