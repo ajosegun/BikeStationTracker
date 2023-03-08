@@ -11,18 +11,20 @@ It utilizes the power of Python and the simplicity of Streamlit and Plotly to pr
 ## Features
 The Bike Station Tracker application provides the following features:
 
-	1. Real-time bike station data: The application retrieves real-time data from the Citybik API, allowing users to view up-to-date information about the number of available bikes and bike stands at each station.
+1. Real-time bike station data: The application retrieves real-time data from the Citybik API, allowing users to view up-to-date information about the number of available bikes and bike stands at each station.
 
-	2. Interactive map: The application displays a map of the detected (or selected) location, allowing users to easily locate bike sharing stations and view information about them.
+2. Interactive map: The application displays a map of the detected (or selected) location, allowing users to easily locate bike sharing stations and view information about them.
 
-	3. Search functionality: Users can search for bike sharing stations by name using the search box in the top left corner of the page. The application will display all stations whose name contains the search term.
+3. Search functionality: Users can search for bike sharing stations by name using the search box in the top left corner of the page. The application will display all stations whose name contains the search term.
 
-	4. Responsive design: The application is designed to be responsive, meaning it will display properly on devices of all sizes, from desktop computers to mobile phones.
+4. Responsive design: The application is designed to be responsive, meaning it will display properly on devices of all sizes, from desktop computers to mobile phones.
 
 Visualizations
-	1. Live Map (Dashboard)
-	2. Bar Chart - for selected station
-	3. Pie Chart - for selected station
+1. Live Map (Dashboard)
+
+2. Bar Chart - for selected station
+
+3. Pie Chart - for selected station
 
 ## Requirements
 Python 3.6 or higher Streamlit Pandas Plotly 
