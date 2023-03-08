@@ -3,6 +3,7 @@
 import requests
 import pandas as pd
 import plotly.express as px
+import plotly.graph_objs as go
 import datetime
 import os
 
@@ -86,6 +87,64 @@ def get_available_stations(city = "Paris"):
         station_list.append(a_dict)
         
     return pd.DataFrame(station_list)
+
+
+def get_location_data(station_name, live_station_data):
+    '''
+    This method requests input from the biker and returns either of the following 
+    - Location data a single location is found for the input
+    - No data if the entry is quit  
+    
+    It displays a list of locations if the input matches more than one location
+    - It requests the biker to input the full name of the location from the displayed list
+    '''
+    
+    requested_station_data = live_station_data[live_station_data["Station Name"].map(lambda name: station_name.lower() in name.lower())]
+
+    if len(requested_station_data.index) == 1:
+        return requested_station_data
+    
+    elif requested_station_data.empty:
+        return None
+
+
+def show_bar_chart(requested_station_data):
+
+    '''
+    Takes in the station data (Pandas dataframe ) and current data
+    Shows a bar chart of the information
+    Returns nothing
+    '''
+    
+    if requested_station_data.empty:
+        # print("Error: Station data is not available!")
+        return None
+    
+    current_date = pd.to_datetime(requested_station_data['timestamp'].iloc[0]).strftime('%a %d %B, %Y at %H:%M')
+    
+    mylabels = ["Empty Slots", "Free Bikes", "ebikes"]
+    
+    data = [int(requested_station_data["empty_slots"]), 
+            int(requested_station_data["free_bikes"]), 
+            int(requested_station_data["ebikes"]),
+             ]
+    
+    # Create a trace for the bar chart
+    colors = ['blue', 'green', 'yellow']
+    trace = go.Bar(x=mylabels, y=data, marker=dict(color=colors))
+
+    # Create a layout for the chart
+    title = "Bike information for: {0} - \nPayment type - {1} on \n{2}".format(
+                    requested_station_data["Station Name"].to_string(index=False),
+                    requested_station_data["payment"].to_string(index=False),
+                    current_date)
+    layout = go.Layout(title=title)
+
+    # Create a figure and add the trace and layout
+    fig = go.Figure(data=[trace], layout=layout)
+
+    return fig
+
 
 def get_user_city_from_ip():
     # Automatically get user IP address
