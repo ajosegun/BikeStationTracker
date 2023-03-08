@@ -13,7 +13,7 @@ user_city = helper.get_user_city_from_ip()
 
 if user_city not in list_of_cities_from_api:
     ## Set default user city
-    st.subheader(f"Bike Data not available for kkjjk detected city: {user_city}")
+    st.subheader(f"Bike Data not available for detected city: {user_city}")
 
     user_city = "Paris"
 
