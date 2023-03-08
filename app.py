@@ -6,6 +6,8 @@ import os
 
 import helper
 
+##i
+
 list_of_cities_from_api = helper.get_all_cities()
 
 user_city = helper.get_user_city_from_ip()
