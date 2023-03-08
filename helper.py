@@ -5,14 +5,8 @@ import pandas as pd
 import plotly.express as px
 import datetime
 import os
-import streamlit as st
 
-print("Geting Token")
-
-if "ACCESS_MAP_TOKEN" in st.secrets:
-    ACCESS_MAP_TOKEN = st.secrets["ACCESS_MAP_TOKEN"]
-else:
-    ACCESS_MAP_TOKEN = os.environ['ACCESS_MAP_TOKEN']
+ACCESS_MAP_TOKEN = os.environ['ACCESS_MAP_TOKEN']
 
 CITYBIK_URL = "http://api.citybik.es/v2/networks"
 
