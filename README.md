@@ -5,10 +5,10 @@ It utilizes the power of Python and the simplicity of Streamlit and Plotly to pr
 
 [Check more on Medium](https://medium.com/@ajosegun_/real-time-dashboard-in-python-b8c9a9c4e050)
 
-##Demo
-[Bike Station Tracker](https://ajosegun-bikestationtracker.streamlit.app/)
+## Demo
+[Bike Station Tracker](https://ajosegun-bikestationtracker.streamlit.app/) Note that it might take a while to load the first time.
 
-##Features
+## Features
 The Bike Station Tracker application provides the following features:
 
 Real-time bike station data: The application retrieves real-time data from the Citybik API, allowing users to view up-to-date information about the number of available bikes and bike stands at each station.
@@ -24,24 +24,19 @@ Live Map (Dashboard)
 Bar Chart - for selected station
 Pie Chart - for selected station
 
-##Requirements
+## Requirements
 Python 3.6 or higher Streamlit Pandas Plotly 
 
-##Installation
+## Installation
 To install the required packages, run the following command: pip install -r requirements.txt
 
-##Usage
+## Usage
 To run the application, navigate to the root directory of the project in the terminal and run the following command:
 
 streamlit run app.py
 
 This will start the application and launch a local server at http://localhost:8501/ in your web browser.
 
-##Conclusion
+## Conclusion
 The Bike Station Tracker is a useful web application that retrieves data from [Citybikes API](http://api.citybik.es/v2/networks) and allows users to view information about bike sharing stations in cities around the world. 
 It provides an interactive map and search functionality for easy navigation and filtering of stations. With its easy installation process and responsive design, the Bike Station Tracker is a valuable tool for anyone looking to access real-time information about bike sharing stations.
-
-
-
-
-
