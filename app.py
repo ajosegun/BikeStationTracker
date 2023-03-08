@@ -9,13 +9,16 @@ import helper
 list_of_cities_from_api = helper.get_all_cities()
 
 user_city = helper.get_user_city_from_ip()
-# user_city = "Paris"
+default_user_city = "Paris"
 
-if user_city not in list_of_cities_from_api:
+if user_city == "Could not get your location.":
+    st.write(f"Could not get your location, using default location: Select a city on the left")
+    user_city = default_user_city
+elif user_city not in list_of_cities_from_api:
     ## Set default user city
     st.subheader(f"Bike Data not available for detected city: {user_city}")
 
-    user_city = "Paris"
+    user_city = default_user_city
 
 selected_city = st.sidebar.selectbox("Select or Type your city", 
                                      list_of_cities_from_api,

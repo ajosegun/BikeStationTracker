@@ -104,7 +104,7 @@ def get_user_city_from_ip():
         city = data.get('city', '')
         return city 
     else:
-        raise "Could not get your location."
+        return "Could not get your location."
     
 
 def show_map(station_data, city):
