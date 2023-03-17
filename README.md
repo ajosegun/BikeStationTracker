@@ -1,5 +1,5 @@
 ## Bike Station Tracker
-Bike Station Tracker users to view information about bike sharing stations in real time. The application uses data provided by the [Citybik API](http://api.citybik.es/v2/networks)
+Bike Station Tracker enables bikers to view information about bike sharing stations in real time. The application uses data provided by the [Citybik API](http://api.citybik.es/v2/networks)
 
 It utilizes the power of Python and the simplicity of Streamlit and Plotly to provide a user-friendly interface for users to interact with the data in form of maps and visualizations. Data is retrieved from the Citybik API.
 
